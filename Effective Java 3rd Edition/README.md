@@ -27,6 +27,7 @@
 * study Repository의 `Issues` 활용
 * **해당 Item을 리딩하는 사람이 책임지고 답변**
 * 스터디가 끝나면 토론한 내용을 바탕으로 `issue`를 정리
+* 다음 스터디 이전까지 `issue`와 `Reading Item`을 정리하여 Repo에 업로드 
 * Why ➡️ How ➡️  What ⭐
 * 공식 문서 적극 활용
 * 스터디에 목적에 맞게 추상화된 개념은 구체화하여 학습
