@@ -168,3 +168,4 @@ public class KoreanDictionary implements Lexicon {}
 
 - 의존 객체 주입이 유연성과 테스트 용이성을 개선해주지만, 의존성이 수천개나 되는 큰 프로젝트에서는 코드를 어지럽게 만들 수도 있다.
     - 대거(Dagger), 주스(Guice), 스프링(Spring) 같은 의존 객체 주입 프레임워크를 사용하면 해결할 수 있다.
+
