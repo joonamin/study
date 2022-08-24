@@ -1,6 +1,6 @@
 [toc]
 
-# Comparable을 구현할지 고려하라
+# item14. Comparable을 구현할지 고려하라
 
 ## Comparable Interface 정의
 
