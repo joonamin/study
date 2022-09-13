@@ -167,12 +167,10 @@ public class Stack implements Cloneable {
 - 위 코드에서 clone을 통해 반환된 Stack 인스턴스의 size 필드는 기본 타입이므로 값이 정상적으로 복사되어 서로 다른 값을 갖지만, 복사된 elements 배열은 원본 Stack 인스턴스의 elements 배열을 참조할 것이다. 원본이나 복제본 하나를 수정하면 다른 하나도 수정되어 불변식을 해친다.
     - (**shallow copy** - ‘주소값’ 복사, 참조하고 있는 실제 값은 같음 ↔ deep copy : ‘실제 값’을 새로운 메모리 공간에 복사)
 
-![Stack 클래스의 clone 테스트](%5Bitem13%5D%20clone%20%E1%84%8C%E1%85%A2%E1%84%8C%E1%85%A5%E1%86%BC%E1%84%8B%E1%85%B4%E1%84%82%E1%85%B3%E1%86%AB%20%E1%84%8C%E1%85%AE%E1%84%8B%E1%85%B4%E1%84%92%E1%85%A2%E1%84%89%E1%85%A5%20%E1%84%8C%E1%85%B5%E1%86%AB%E1%84%92%E1%85%A2%E1%86%BC%E1%84%92%E1%85%A1%E1%84%85%E1%85%A1%2042570e2d49b041b3b8833ba4735004ca/%25EB%258B%25A4%25EC%259A%25B4%25EB%25A1%259C%25EB%2593%259C.png)
-
+![다운로드](https://user-images.githubusercontent.com/48662662/189886536-07d07edd-0bcf-4844-8799-4909803d48a7.png)
 Stack 클래스의 clone 테스트
 
-![테스트 결과](%5Bitem13%5D%20clone%20%E1%84%8C%E1%85%A2%E1%84%8C%E1%85%A5%E1%86%BC%E1%84%8B%E1%85%B4%E1%84%82%E1%85%B3%E1%86%AB%20%E1%84%8C%E1%85%AE%E1%84%8B%E1%85%B4%E1%84%92%E1%85%A2%E1%84%89%E1%85%A5%20%E1%84%8C%E1%85%B5%E1%86%AB%E1%84%92%E1%85%A2%E1%86%BC%E1%84%92%E1%85%A1%E1%84%85%E1%85%A1%2042570e2d49b041b3b8833ba4735004ca/img.png)
-
+![img](https://user-images.githubusercontent.com/48662662/189886687-4867a2c7-d906-483c-b230-0e48f14ac43b.png)
 테스트 결과
 
 - 다음은 Stack 객체를 하나 생성하고 2개의 Foo 객체를 push한다. 그리고 clone으로 새로운 Stack 객체를 만든 뒤 cloneStack 객체에 1개의 객체를 push한다.
