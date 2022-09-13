@@ -163,4 +163,4 @@ public class ChangibleObject {
 
 - 위와 같이 가변객체 Subject를 private static final로 참조한다면, 해당 참조만 그대로 유지하고 그 값만 변경하는 식으로 “불변”을 깰 수 있다.
 - public 클래스는 상수용 public static final 필드 외에는 어떠한 public 필드도 가져서는 안된다.
-- public static final 필드가 참조하는 객체가 불변인지 확인하라.
+- public static final 필드가 참조하는 객체가 불변인지 확인하라. 
