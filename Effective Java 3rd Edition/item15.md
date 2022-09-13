@@ -27,8 +27,17 @@
 
 **public**: 모든 곳에서 접근 가능
 
-- 톱레벨 클래스 : 중첩 클래스가 아닌 클래스(즉, 단일 형태의 클래스)
-- 중첩 클래스: 다른 클래스/인터페이스 내부에 선언된 클래스
+- 톱레벨 클래스
+- 중첩 클래스
+
+```java
+public class Foo { // top level class
+
+    public static class NestedBar { // nested class
+    }
+
+}
+```
 
 톱레벨 클래스나 인터페이스에 부여할 수 있는 접근 수준은 package-private와 public 두 가지이다.
 
@@ -94,7 +103,7 @@ public class test {
 ```java
 public class Member2 {
 	private static final long serialVersionUID = 1L;
-	private static final Subject subject = new Subject("eunyeong");
+	~~public~~ static final Subject subject = new Subject("eunyeong");
 	private String id;
 	private String password;
 	private String name;
@@ -132,7 +141,7 @@ public class Subject {
 ```
 
 ```java
-//private static final 이 가변객체를 가리키면 수정될 수 있다.
+//~~private~~ static final 이 가변객체를 가리키면 수정될 수 있다.
 public class ChangibleObject {
 	public static void main(String[] args) {
 		Member2 member = new Member2("eunyeong@naver.com", "1234", "정은영");

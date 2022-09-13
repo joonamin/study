@@ -55,7 +55,7 @@ public PhoneNumber clone() {
 
 - PhoneNumber의 클래스 선언에 Cloneable을 구현한다고 추가해야한다.
 - Object의 clone메서드는 Object를 반환하지만 PhoneNumber의 clone 메서드는 PhoneNumber를 반환하게 한다.
-- super.clone에서 얻은 객체를 반환하기 전에 PhoneNumㅠer로 형변환하였다.
+- super.clone에서 얻은 객체를 반환하기 전에 PhoneNumer로 형변환하였다.
 
 ```java
  public class Foo implements Cloneable { //clone 메소드를 재정의 하기 위해서 Cloneable 인터페이스를 상속한다. 
@@ -179,7 +179,7 @@ Stack 클래스의 clone 테스트
 - 기존의 객체와 clone한 객체의 elements는 달라야 하는게 정상이라고 생각할 수 있다. 하지만 test 결과를 보자.
 - 위와 같이 테스트는 성공한다. Stack 클래스의 int size 필드는 기본타입으로 값이 정상적으로 복사되어 서로 다른 값을 갖지만, 참조 필드인 element의 경우 같은 주소를 가지게 된다.
 
-- clone 메서드는 우너본 객체에 아무런 해를 끼치지 않는 동시에 복제된 객체의 불변식을 보장해야 한다.
+- clone 메서드는 원본 객체에 아무런 해를 끼치지 않는 동시에 복제된 객체의 불변식을 보장해야 한다.
 
 이를 가장 간단한 해결할 방법은 다음과 같다.
 
@@ -261,7 +261,7 @@ public static Yum newInstance(Yum yum) {...};
 
 - 복사 생성자와 복사 팩터리는 위의 clone의 모든 단점을 해결할 수 있다.
 - 또한 해당 클래스가 구현한 ‘인터페이스’ 타입의 인스턴스를 인수로 받을 수 있다.
-    - 메서드가 인터페이스 타입의 인수를 받을 수 있다는 것은 메서드 호출 시 해당 인터페이스를 구현한 클래스의 인스턴스를 구현한 클래스의 인스턴스를 인수로 받을 수 있다는 것이다.
+    - 메서드가 인터페이스 타입의 인수를 받을 수 있다는 것은 메서드 호출 시 해당 인터페이스를 구현한 클래스의 인스턴스를 인수로 받을 수 있다는 것이다.
 - 또한 원본의 구현 타입에 얽매이지 않고 복제본의 타입을 직접 선택할 수 있다.
     - HashSet 객체 s를 treeSet 타입으로 복제할 수 있다.
 
