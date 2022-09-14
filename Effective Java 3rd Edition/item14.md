@@ -42,13 +42,13 @@
 
 
 
-3. `Comparable`을 구현한 클래스는 모든 z에 대해 `x.compareTo(z) == 0` 이면 `sign(x.compareTo(z)) == sign(y.compareTo(z))`이다.
+3. `Comparable`을 구현한 클래스는 모든 z에 대해 `x.compareTo(y) == 0` 이면 `sign(x.compareTo(z)) == sign(y.compareTo(z))`이다.
 
 
 
 4. (권장) `(x.compareTo(y) == 0)` == `(x.equals(y))`
 
-임의의 인스턴스 2개를 비교할 때, *주어진 객체보다 <u>작으면 음의 정수</u> , <u>같으면 0</u>, <u>크면 양의 정수</u> 를 반환한다.* 의 방식으로 구현할 경우 위 조건을 만족하게 된다. <u>하지만</u>, 단순하게 x가 y보다 크다면 1 그 외에는 모두 0을 반환한다고 정의할 경우에 위 권고사항을 만족하지 못한다. 
+임의의 인스턴스 2개를 비교할 때, *주어진 객체보다 <u>작으면 음의 정수</u> , <u>같으면 0</u>, <u>크면 양의 정수</u> 를 반환한다.* 의 방식으로 구현할 경우 위 조건을 만족하게 된다. <u>하지만</u>, 단순하게 x가 y보다 크다면 1 그 외에는 모두 0을 반환한다고 정의할 경우에 위 권고사항을 만족하지 못한다.
 
 권고 사항을 준수한다면, `compareTo(T)` 의 결과와 `equals(T)` 의 **결과의 일관성을 보장**할 수 있다. 간혹, `compareTo(T)`를 내부 연산으로 활용하는 컬렉션과 `equals(T)`를 내부 연산으로 활용하는 컬렉션을 혼용한다면 이 부분에서 예기치 못한 문제가 발생할 수 있으므로 4번 권고사항을 지키지 않게 설계한다면 그에 대한 description을 명시해야한다.
 
@@ -104,9 +104,13 @@ ex) `BigDecimal(String)`
 
 
 
+
+
 3. `compareTo` 메소드에서 `<` , `>` 등을 사용하는 것 대신 Comparator의  `compare()` 을 통해 비교를 수행하자
 
 자바 8부터 권장되는 방식인데, Comparator 함수형 인터페이스의 비교자 생성 메서드(ex. comparing-)을 통해 메소드 연쇄 방식으로 비교자를 생성할 수 있게 되었다.  이 방식을 `compareTo()` 와 결합하므로서 객체지향적인 compareTo() 설계가 가능해진다.
+
+
 
 
 
@@ -200,8 +204,6 @@ static Comparator<Object> hashCodeOrder = Comparator.comparingInt(o -> o.hashCod
 * `compareTo(T)` 
 
 `Comparable<T> ` interface를 기반으로 구현. 해당 클래스가 가지는 **기본적인 순서(natural order)**를 정의할 때 사용한다.
-
-
 
 * `compare(T, T)` 
 

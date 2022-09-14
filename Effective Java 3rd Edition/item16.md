@@ -63,7 +63,7 @@ public class Point {
 >
 > 
 >
-> - Allowing **inheritors to change the semantics of how the property behaves** and is exposed by overriding the getter/setter methods.
+> - ~~Allowing **inheritors to change the semantics of how the property behaves** and is exposed by overriding the getter/setter methods.~~
 >
 > 
 >
@@ -96,3 +96,4 @@ A. 동기화 이슈도 고려해야한다. 가변 객체에 여러 모듈들이 
 **Q. 그렇다면 public 클래스의 필드가 불변이라면 해당 필드를 노출했을 때 단점이 모두 없어질까?**
 
 A. 아니다! API를 변경하지 않고서는 표현 방식을 바꿀 수 없고 필드를 읽을 때 부수작업(ex. validation)등을 수행할 수 없다는 문제점은 여전하다. 
+
