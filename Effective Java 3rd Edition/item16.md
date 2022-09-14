@@ -21,7 +21,7 @@ public class Point {
 
 * 클라이언트는 특정 기능을 사용하기 위하여 API를 호출하는데 API 자체가 아닌 내부 구현에 의존할 경우, 추후에 이 구현 방법 자체를 수정하기 매우 어려워진다. 
 
-	> ''자주 변경되는 구체(Concret)클래스에 의존하지 마라" - 로버트 C. 마틴 
+	> ''자주 변경되는 구체(Concrete)클래스에 의존하지 마라" - 로버트 C. 마틴 
 
 
 
@@ -63,7 +63,7 @@ public class Point {
 >
 > 
 >
-> - ~~Allowing **inheritors to change the semantics of how the property behaves** and is exposed by overriding the getter/setter methods.~~
+> - Allowing **inheritors to change the semantics of how the property behaves** and is exposed by overriding the getter/setter methods.
 >
 > 
 >
@@ -95,5 +95,5 @@ A. 동기화 이슈도 고려해야한다. 가변 객체에 여러 모듈들이 
 
 **Q. 그렇다면 public 클래스의 필드가 불변이라면 해당 필드를 노출했을 때 단점이 모두 없어질까?**
 
-A. 아니다! API를 변경하지 않고서는 표현 방식을 바꿀 수 없고 필드를 읽을 때 부수작업(ex. validation)등을 수행할 수 없다는 문제점은 여전하다. 
 
+A. 아니다! API를 변경하지 않고서는 표현 방식을 바꿀 수 없고 필드를 읽을 때 부수작업(ex. validation)등을 수행할 수 없다는 문제점은 여전하다. 

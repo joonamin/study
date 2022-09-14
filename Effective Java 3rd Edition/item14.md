@@ -105,11 +105,9 @@ ex) `BigDecimal(String)`
 
 
 
-
 3. `compareTo` 메소드에서 `<` , `>` 등을 사용하는 것 대신 Comparator의  `compare()` 을 통해 비교를 수행하자
 
 자바 8부터 권장되는 방식인데, Comparator 함수형 인터페이스의 비교자 생성 메서드(ex. comparing-)을 통해 메소드 연쇄 방식으로 비교자를 생성할 수 있게 되었다.  이 방식을 `compareTo()` 와 결합하므로서 객체지향적인 compareTo() 설계가 가능해진다.
-
 
 
 
@@ -204,6 +202,7 @@ static Comparator<Object> hashCodeOrder = Comparator.comparingInt(o -> o.hashCod
 * `compareTo(T)` 
 
 `Comparable<T> ` interface를 기반으로 구현. 해당 클래스가 가지는 **기본적인 순서(natural order)**를 정의할 때 사용한다.
+
 
 * `compare(T, T)` 
 
