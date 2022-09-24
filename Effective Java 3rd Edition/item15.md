@@ -86,7 +86,8 @@ public class test {
 }
 ```
 
-![21226F42578D2F8137.jpg](%5Bitem15%5D%20%E1%84%8F%E1%85%B3%E1%86%AF%E1%84%85%E1%85%A2%E1%84%89%E1%85%B3%E1%84%8B%E1%85%AA%20%E1%84%86%E1%85%A6%E1%86%B7%E1%84%87%E1%85%A5%E1%84%8B%E1%85%B4%20%E1%84%8C%E1%85%A5%E1%86%B8%E1%84%80%E1%85%B3%E1%86%AB%20%E1%84%80%E1%85%AF%E1%86%AB%E1%84%92%E1%85%A1%E1%86%AB%E1%84%8B%E1%85%B3%E1%86%AF%20%E1%84%8E%E1%85%AC%E1%84%89%E1%85%A9%E1%84%92%E1%85%AA%20c3877a39f8c84716b5a58da58c345ba4/21226F42578D2F8137.jpg)
+![21226F42578D2F8137](https://user-images.githubusercontent.com/48662662/189886224-eaa4e02a-6c67-48c3-ace7-9b65ec2c8067.jpg)
+
 
 1. public final 필드의 문제점
 - private 필드라면 내부 구현 변경 시 private 필드를 삭제할 수 있고, Getter든 Setter든 해당 클래스 내부만 수정하면 된다. 하지만 public final 필드의 경우 내부 구현 변경시 이 필드가 직접 사용되고 있는 모든 소스코드를 찾아가 수정해야 한다.
@@ -162,4 +163,4 @@ public class ChangibleObject {
 
 - 위와 같이 가변객체 Subject를 private static final로 참조한다면, 해당 참조만 그대로 유지하고 그 값만 변경하는 식으로 “불변”을 깰 수 있다.
 - public 클래스는 상수용 public static final 필드 외에는 어떠한 public 필드도 가져서는 안된다.
-- public static final 필드가 참조하는 객체가 불변인지 확인하라.
+- public static final 필드가 참조하는 객체가 불변인지 확인하라. 
